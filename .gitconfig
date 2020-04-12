@@ -1,0 +1,19 @@
+[user]
+	name = Enrico Perera
+	email = reperera@gmail.com
+
+[diff]
+	tool = bc3
+[difftool "bc3"]
+	trustExitCode = true
+[core]
+	editor = vim
+[mergetool "gitblade"]
+	cmd = \"/usr/lib/gitblade/gitblade\" -c \"\"
+	trustExitCode = true
+
+[alias]
+	co = checkout
+	ec = config --global -e
+	cob = checkout -b
+	st = status
