@@ -3,13 +3,17 @@
 	email = reperera@gmail.com
 
 [diff]
-	tool = bc3
-[difftool "bc3"]
+	tool = bc
+[difftool "bc"]
 	trustExitCode = true
+	cmd = /usr/bin/bcompare $LOCAL $REMOTE
 [core]
 	editor = vim
-[mergetool "gitblade"]
-	cmd = \"/usr/lib/gitblade/gitblade\" -c \"\"
+[merge]
+	tool = bc
+[mergetool "bc"]
+	cmd = /usr/bin/bcompare "$PWD/$LOCAL" "$PWD/$REMOTE" "$PWD/BASE" "$PWD/$MERGED"
+	keepBackup = false
 	trustExitCode = true
 
 [alias]
