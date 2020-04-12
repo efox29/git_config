@@ -6,14 +6,11 @@
 	tool = bc
 [difftool "bc"]
 	trustExitCode = true
-	cmd = /usr/bin/bcompare $LOCAL $REMOTE
 [core]
 	editor = vim
 [merge]
 	tool = bc
 [mergetool "bc"]
-	cmd = /usr/bin/bcompare "$PWD/$LOCAL" "$PWD/$REMOTE" "$PWD/BASE" "$PWD/$MERGED"
-	keepBackup = false
 	trustExitCode = true
 
 [alias]
@@ -21,3 +18,4 @@
 	ec = config --global -e
 	cob = checkout -b
 	st = status
+
