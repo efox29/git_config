@@ -6,6 +6,7 @@
 	mnob = merge --ff-only ; merge no branch
 	myesb = merge --no-ff ; merge yes branch
 	cam = commit -am ; commit all with message
+	cm = commit -m ; commit with message
 	ri = rebase -i ; rebase interactive
 	ap = add -p ; patch mode 
 	tagld = tag --delete ; tag local delete
