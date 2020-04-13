@@ -1,0 +1,10 @@
+[alias]
+	co = checkout
+	ec = config --global -e
+	cob = checkout -b
+	st = status
+	mnob = merge --ff-only
+	myesb = merge --no-ff
+	cam = commit -am
+	ri = rebase -i
+	ap = add -p
