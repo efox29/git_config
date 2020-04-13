@@ -1,10 +1,13 @@
 [alias]
 	co = checkout
-	ec = config --global -e
+	ec = config --global -e ; modify global config file
 	cob = checkout -b
 	st = status
-	mnob = merge --ff-only
-	myesb = merge --no-ff
-	cam = commit -am
-	ri = rebase -i
-	ap = add -p
+	mnob = merge --ff-only ; merge no branch
+	myesb = merge --no-ff ; merge yes branch
+	cam = commit -am ; commit all with message
+	ri = rebase -i ; rebase interactive
+	ap = add -p ; patch mode 
+	tagld = tag --delete ; tag local delete
+	tagrd = push --delete origin ; tag remote delete
+	tagp = push --tags ; tag push
