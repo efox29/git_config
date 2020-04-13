@@ -21,3 +21,5 @@
 	mnob = merge --ff-only
 	myesb = merge --no-ff
 	cam = commit -am
+	ri = rebase -i
+	ap = add -p
