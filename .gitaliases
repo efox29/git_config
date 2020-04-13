@@ -12,3 +12,4 @@
 	tagrd = push --delete origin ; tag remote delete
 	tagp = push --tags ; tag push
 	brd = branch -d ; branch delete
+	br = branch
