@@ -8,6 +8,7 @@
 	cam = commit -am ; commit all with message
 	cm = commit -m ; commit with message
 	ac = "!f() { git add $1 && git commit; }; f" ; add file ($1) and then commit
+	acm ="!f() { git add $1 && git commit -m \"$2\"; }; f "  ; add file ($1) and then commmit w/ msg ($2)
 	ri = rebase -i ; rebase interactive
 	ap = add -p ; patch mode 
 	tagld = tag --delete ; tag local delete
