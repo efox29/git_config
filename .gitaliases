@@ -7,6 +7,7 @@
 	myesb = merge --no-ff ; merge yes branch
 	cam = commit -am ; commit all with message
 	cm = commit -m ; commit with message
+	ac = "!f() { git add $1 && git commit; }; f" ; add file ($1) and then commit
 	ri = rebase -i ; rebase interactive
 	ap = add -p ; patch mode 
 	tagld = tag --delete ; tag local delete
