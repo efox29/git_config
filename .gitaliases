@@ -16,3 +16,14 @@
 	tagp = push --tags ; tag push
 	brd = branch -d ; branch delete
 	br = branch
+	# log output
+	lgfc = log --stat
+	lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+	lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+	lg = !"git lg1"
+	# lists commits in short form
+	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%C(green)\\ [%cn]" --decorate
+	# show changed files 
+	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cgreen\\ [%cn]" --decorate --numstat
+	# show commits with date where you specify the last number of commits to show with a -n  ex. git lds -10 would show last 10 commits
+	lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cgreen\\ [%cn]" --decorate --date=short
