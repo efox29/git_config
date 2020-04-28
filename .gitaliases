@@ -1,27 +1,44 @@
 [alias]
 	au = add -u  ; add updated (or changed)
+# checkout 
 	co = checkout
 	ec = config --global -e ; modify global config file
 	cob = checkout -b
 	st = status
+
+# merge
 	mnob = merge --ff-only ; merge no branch
 	myesb = merge --no-ff ; merge yes branch
+
+# push
+	pushf = push --force
+
+# commit
 	cam = commit -am ; commit all with message
 	cm = commit -m ; commit with message
+
+# commit ammend
 	amendunm = !git add -u && git commit --amend --no-edit; add updated and ammend with no msg
 	amendnm = commit --amend --no-edit
 	amendum = !git add -u && git commit --amend ; add updated and amend last commit with msg
 	amend = commit --amend
 	ac = "!f() { git add $1 && git commit; }; f" ; add file ($1) and then commit
 	acm ="!f() { git add $1 && git commit -m \"$2\"; }; f "  ; add file ($1) and then commmit w/ msg ($2)
+
+# rebase / writing history
 	ri = rebase -i ; rebase interactive
 	ap = add -p ; patch mode 
+
+# tag stuff
 	tagld = tag --delete ; tag local delete
 	tagrd = push --delete origin ; tag remote delete
 	tagp = push --tags ; tag push
+
+# branch stuff
 	brd = branch -d ; branch delete
 	br = branch
-	# log output
+
+# log output
 	lgfc = log --stat
 	lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
 	lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
