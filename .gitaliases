@@ -35,7 +35,8 @@
 	tagp = push --tags ; tag push
 
 # branch stuff
-	brd = branch -d ; branch delete
+	brd = branch -d ; branch delete if merged only
+	brD = branch -D ; delete branch even if not merged
 	br = branch -a
 
 # work tree stuff
