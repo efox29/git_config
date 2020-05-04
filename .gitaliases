@@ -38,6 +38,9 @@
 	brd = branch -d ; branch delete
 	br = branch
 
+# work tree stuff
+	wa = "!f() { git worktree add -b $1 $1; }; f" ; add a worktree with the branch name same as folder
+
 # diff stuff
 	difffo = diff --name-status ; shows just the files that were changed between two commits
 
