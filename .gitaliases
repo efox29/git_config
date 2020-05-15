@@ -1,5 +1,13 @@
 [alias]
 	au = add -u  ; add updated (or changed)
+# clone stuff
+	cl = clone
+	clr = clone --recurse-submodules
+
+#submodules
+	smu = submodule update
+	smi = submodule update --init ; 
+
 # checkout 
 	co = checkout
 	ec = config --global -e ; modify global config file
