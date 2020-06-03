@@ -33,3 +33,18 @@ git ec.
 
 ## Windows
 Todo
+
+## Optional
+
+To make the git diffs (not difftool) look better, use the following plugin called [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy)
+
+The diff-so-fancy is a submodule of this repo and can be init with the
+```
+git submodule update --init
+```
+or 
+```
+git submodule update
+```
+
+Then follow the readme contained within the diff-so-fancy repository to configure.
