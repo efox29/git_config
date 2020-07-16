@@ -41,6 +41,8 @@
 	tagld = tag --delete ; tag local delete
 	tagrd = push --delete origin ; tag remote delete
 	tagp = push --tags ; tag push
+	taga = tag -a ; annotated tag 
+	tagam = "!f() { git tag -a $1 $2; }; f" ; annotated tag w/ msg. [tag name and then message within " ")
 
 # branch stuff
 	brd = branch -d ; branch delete if merged only
