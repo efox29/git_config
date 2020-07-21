@@ -1,5 +1,8 @@
 [alias]
 	au = add -u  ; add updated (or changed)
+# cleaning / house keeping
+	clense = "!f() { git clean -n -d && echo \"If this is good, run 'git tidy\";}; f"
+	tidy = clean -f -d
 # clone stuff
 	cl = clone
 	clr = clone --recurse-submodules
@@ -40,10 +43,11 @@
 # tag stuff
 	tagld = tag --delete ; tag local delete
 	tagrd = push --delete origin ; tag remote delete
+	taglrd = "!f() { git tagld $1 && git tagrd $1; }; f" ; local and remote tag deletion
 	tagp = push --tags ; tag push
 	taga = tag -a ; annotated tag 
 	tagam = "!f() { git tag -a $1 $2; }; f" ; annotated tag w/ msg. [tag name and then message within " ")
-
+	
 # branch stuff
 	brd = branch -d ; branch delete if merged only
 	brD = branch -D ; delete branch even if not merged
