@@ -58,6 +58,8 @@
         wd =  worktree remove ; worktree remove removes the folder and references to the worktree
 # diff stuff
 	difffo = diff --name-status ; diff file only shows just the files that were changed between two commits
+# view files
+	tracked = ls-tree -r HEAD --name-only ; show all files that are tracked in current branch
 
 # log output
 	lgfc = log --stat
