@@ -57,6 +57,7 @@
 # work tree stuff
 	wa = "!f() { git worktree add -b $1 $1; }; f" ; add a worktree with the branch name same as folder
         wd =  worktree remove ; worktree remove removes the folder and references to the worktree
+	wl =  worktree list ; lists all the worktrees
 # diff stuff
 	difffo = diff --name-status ; diff file only shows just the files that were changed between two commits
 # view files
