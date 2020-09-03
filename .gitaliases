@@ -53,6 +53,8 @@
 	brd = branch -d ; branch delete if merged only
 	brD = branch -D ; delete branch even if not merged
 	br = branch -a
+	brlrd = "!f() { git branch -d $1 && git push origin --delete $1; }; f" ; local nd remote branch delete
+	brrd = push origin --delete ; delete remote branch
 
 # work tree stuff
 	wa = "!f() { git worktree add -b $1 $1; }; f" ; add a worktree with the branch name same as folder
