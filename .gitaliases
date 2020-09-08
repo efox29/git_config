@@ -11,7 +11,8 @@
 	smu = submodule update
 	smi = submodule update --init ; 
 	sml = "!f() { git submodule foreach \"(git checkout master; git pull)\";}; f" ; checkout master and update to lastest for each submod
-
+	smd = submodule deinit ; denit submodule if possible
+	smdd = submodule denit --force ; forcefully remove submodule
 # checkout 
 	co = checkout
 	ec = config --global -e ; modify global config file
