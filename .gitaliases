@@ -50,6 +50,7 @@
 	taga = tag -a ; annotated tag 
 	tagam = "!f() { git tag -a $1 $2; }; f" ; annotated tag w/ msg. [tag name and then message within " ")
  	pt = push origin ; pushes tag to origin	
+	tagw = for-each-ref refs/tags ; tag what - shows which tags are annoted or commits
 # branch stuff
 	brd = branch -d ; branch delete if merged only
 	brD = branch -D ; delete branch even if not merged
