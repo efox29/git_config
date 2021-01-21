@@ -1,8 +1,8 @@
 [alias]
 	au = add -u  ; add updated (or changed)
 # cleaning / house keeping
-	clense = "!f() { git clean -n -d && echo \"If this is good, run 'git tidy\";}; f"
-	tidy = clean -f -d
+	clense = "!f() { ~/git_config/tidy.sh ; }; f"
+	tidy = clense
 # clone stuff
 	cl = clone
 	clr = clone --recurse-submodules
