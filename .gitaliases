@@ -8,6 +8,7 @@
 	clr = clone --recurse-submodules
 
 #submodules
+	sma = submodule add ; submodule add
 	smu = submodule update
 	smi = submodule update --init ; 
 	sml = "!f() { git submodule foreach \"(git checkout master; git pull)\";}; f" ; checkout master and update to lastest for each submod
