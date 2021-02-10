@@ -11,6 +11,10 @@
 	tool = bc
 [mergetool "bc"]
 	trustExitCode = true
+
+[commit]
+	template = ~/git_config/.gitmessage
+
 [include]
 	path = ~/git_config/.gitaliases
 	path = ~/.git_global_config
