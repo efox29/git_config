@@ -1,6 +1,5 @@
 [user]
 	name = Enrico Perera
-	email = reperera@gmail.com
 
 [diff]
 	tool = bc
@@ -14,3 +13,20 @@
 	trustExitCode = true
 [include]
 	path = ~/git_config/.gitaliases
+	path = ~/.git_global_config
+[core]
+	pager = ~/git_config/diff-so-fancy/diff-so-fancy | less --tabs=4 -RFX
+[color]
+	ui = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green 22
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
