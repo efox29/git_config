@@ -17,6 +17,11 @@ Enter the following
 [user]
 	email = email@domain.com
 ```
+Make sure that you have your name already defined, if not, you can add it above or use the 
+```
+	git config --global user.name "Enrico Perera"
+```
+
 ## Optional 
 
 To make the git diffs (not difftool) look better, use the following plugin called [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy)
