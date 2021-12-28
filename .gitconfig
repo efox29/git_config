@@ -1,6 +1,8 @@
 [user]
 	name = Enrico Perera
-
+[core]
+	# this is necesssary if using multi-OS dev, otherwise diff gets destroyed with ^M
+	autocrlf = true 
 [diff]
 	tool = bc
 [difftool "bc"]
@@ -20,6 +22,7 @@
 	path = ~/.git_global_config
 [core]
 	pager = ~/git_config/diff-so-fancy/diff-so-fancy | less --tabs=4 -RFX
+	autocrlf = true
 [color]
 	ui = true
 [color "diff-highlight"]
