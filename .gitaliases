@@ -15,7 +15,7 @@
 	smd = submodule deinit ; denit submodule if possible
 	smdd = submodule denit --force ; forcefully remove submodule
 # checkout 
-	co = checkout
+	co = switch
 	ec = config --global -e ; modify global config file
 	cob = checkout -b
 	st = status
