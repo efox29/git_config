@@ -16,6 +16,8 @@
 	smdd = submodule denit --force ; forcefully remove submodule
 # checkout 
 	co = switch
+	cot = checkout ; checkout tag - but can also be used for commits
+	coc = cot ; checkout commit, but this is just a naming thing, at the end of the day its really just checkout
 	ec = config --global -e ; modify global config file
 	cob = checkout -b
 	st = status
