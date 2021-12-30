@@ -18,6 +18,8 @@
 	co = switch
 	cot = checkout ; checkout tag - but can also be used for commits
 	coc = cot ; checkout commit, but this is just a naming thing, at the end of the day its really just checkout
+	cof = cot ; checkout file, this is just resets the file - there is another way of doing this though.
+	rf = restore ; this is the new way of restoring a file.
 	ec = config --global -e ; modify global config file
 	cob = checkout -b
 	st = status
