@@ -10,7 +10,7 @@ The easiest way is to create a smybolic link to gitconfig file. This works on bo
 The email address is intentionally left out of the config so that you can use this for work and home, and you just have to specify which email address you are using.
 
 You will have to also create the following file
-`touch ~/.git_global_configs`
+`touch ~/.git_global_config`
 
 Enter the following
 ```
