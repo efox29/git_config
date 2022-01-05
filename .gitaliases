@@ -3,6 +3,7 @@
 # cleaning / house keeping
 	clense = "!f() { ~/git_config/tidy.sh ; }; f"
 	tidy = clense
+	brc = fetch -p ; 
 # clone stuff
 	cl = clone
 	clr = clone --recurse-submodules
