@@ -73,7 +73,7 @@
 	difffo = diff --name-status ; diff file only shows just the files that were changed between two commits
 # view files
 	tracked = ls-tree -r HEAD --name-only ; show all files that are tracked in current branch
-
+	changed = "!f() { git --no-pager diff --name-only; }; f"  ; shows which files were changed
 # log output
 	lgfc = log --stat
 	lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
