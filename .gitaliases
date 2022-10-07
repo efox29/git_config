@@ -26,6 +26,7 @@
 	st = status
 # remote stuff
     rv = remote -v ; view remote urls
+    pr = remote prune origin
 # merge
 	mnob = merge --ff-only ; merge no branch
 	myesb = merge --no-ff ; merge yes branch
