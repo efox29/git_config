@@ -4,6 +4,8 @@
 	clense = "!f() { ~/git_config/tidy.sh ; }; f"
 	tidy = clense
 	brc = fetch -p ; 
+	;brr = branch reset to remote. It forces the local branch to be exactly like remote.
+	brr = "!read -p 'Are you sure you want to override local branch with remote? (y/n): ' yn; if [[ $yn == 'y' ]]; then git fetch origin && git reset --hard origin/$(git symbolic-ref --short HEAD); else echo 'Operation cancelled'; fi"
 # clone stuff
 	cl = clone
 	clr = clone --recurse-submodules
