@@ -61,8 +61,8 @@
 	tagam = "!f() { git tag -a $1 $2; }; f" ; annotated tag w/ msg. [tag name and then message within " ")
  	pt = push origin ; pushes tag to origin	
 	tagw = for-each-ref refs/tags ; tag what - shows which tags are annoted or commits
-	tagllt = "!f() { git for-each-ref refs/tags --format \"%(refname:short) %(objecttype)\" | awk '$2==\"commit\" {print $1}'; }; f" ; list lightweight tags
-	taglat = "!f() { git for-each-ref refs/tags --format \"%(refname:short) %(objecttype)\" | awk '$2==\"tag\" {print $1}'; }; f" ; list annotated tags
+	tagll = "!f() { git for-each-ref refs/tags --format \"%(refname:short) %(objecttype)\" | awk '$2==\"commit\" {print $1}'; }; f" ; list lightweight tags
+	tagla = "!f() { git for-each-ref refs/tags --format \"%(refname:short) %(objecttype)\" | awk '$2==\"tag\" {print $1}'; }; f" ; list annotated tags
 # branch stuff
 	brd = branch -d ; branch delete if merged only
 	brD = branch -D ; delete branch even if not merged
