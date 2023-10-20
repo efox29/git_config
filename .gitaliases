@@ -63,6 +63,8 @@
 	tagw = for-each-ref refs/tags ; tag what - shows which tags are annoted or commits
 	tagll = "!f() { git for-each-ref refs/tags --format \"%(refname:short) %(objecttype)\" | awk '$2==\"commit\" {print $1}'; }; f" ; list lightweight tags
 	tagla = "!f() { git for-each-ref refs/tags --format \"%(refname:short) %(objecttype)\" | awk '$2==\"tag\" {print $1}'; }; f" ; list annotated tags
+	taglad = "!f() { git show-ref --tags | while read -r hash ref; do if git cat-file -t \"$hash\" | grep -q '^tag$'; then tagname=\"${ref#refs/tags/}\"; tagdate=$(git for-each-ref --format '%(taggerdate)' \"$ref\"); printf \"%-30s %s\\n\" \"$tagname\" \"$tagdate\"; fi; done; }; f" ; list annotated tags with date of release
+
 # branch stuff
 	brd = branch -d ; branch delete if merged only
 	brD = branch -D ; delete branch even if not merged
