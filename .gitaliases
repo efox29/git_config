@@ -51,6 +51,8 @@
 # rebase / writing history
 	ri = rebase -i ; rebase interactive
 	ap = add -p ; patch mode 
+	rc = rebase --continue # rebase continue
+	ra = rebase --abort # rebase abort
 
 # tag stuff
 	tagld = tag --delete ; tag local delete
