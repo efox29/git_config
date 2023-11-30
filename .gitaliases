@@ -26,6 +26,7 @@
 	ec = config --global -e ; modify global config file
 	cob = checkout -b
 	st = status
+	stt = status -uno # status but only tracked (status tracked)
 # remote stuff
     rv = remote -v ; view remote urls
     pr = remote prune origin
