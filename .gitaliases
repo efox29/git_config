@@ -68,6 +68,8 @@
 	tagla = "!f() { git for-each-ref refs/tags --format \"%(refname:short) %(objecttype)\" | awk '$2==\"tag\" {print $1}'; }; f" ; list annotated tags
 	taglad = "!f() { git show-ref --tags | while read -r hash ref; do if git cat-file -t \"$hash\" | grep -q '^tag$'; then tagname=\"${ref#refs/tags/}\"; tagdate=$(git for-each-ref --format '%(taggerdate)' \"$ref\"); printf \"%-30s %s\\n\" \"$tagname\" \"$tagdate\"; fi; done; }; f" ; list annotated tags with date of release
 	tagdate = "!f() { tag=$1; ref=\"refs/tags/$tag\"; hash=$(git show-ref --tags | awk -v ref=\"$ref\" '$2==ref {print $1}'); if [ -z \"$hash\" ]; then echo \"Tag not found\"; return 1; fi; if git cat-file -t \"$hash\" | grep -q '^tag$'; then tagdate=$(git for-each-ref --format '%(taggerdate)' \"$ref\"); echo \"$tagdate\"; else echo \"Not an annotated tag\"; fi; }; f" # get date of annotated tag
+	# TAG List LAST annotated
+	taglla = "!f() { git describe --tags $(git rev-list --tags --max-count=1); }; f" 
 
 
 
