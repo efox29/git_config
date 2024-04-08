@@ -79,7 +79,7 @@
 	br = branch -a
 	brlrd = "!f() { git branch -d $1 && git push origin --delete $1; }; f" ; local nd remote branch delete
 	brrd = push origin --delete ; delete remote branch
-
+	bb = "!f() { ~/git_config/better-branch.sh ; }; f"
 # work tree stuff
 	wa = "!f() { git worktree add -b $1 $1; }; f" ; add a worktree with the branch name same as folder
         wd =  worktree remove ; worktree remove removes the folder and references to the worktree
@@ -100,3 +100,6 @@
 	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cgreen\\ [%cn]" --decorate --numstat
 	# show commits with date where you specify the last number of commits to show with a -n  ex. git lds -10 would show last 10 commits
 	lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cgreen\\ [%cn]" --decorate --date=short
+
+# blame stuff
+    hf = "!f() { ~/git_config/function_history.sh $1 $2 ; }; f" 
