@@ -36,6 +36,8 @@
 
 # push
 	pushf = push --force-with-lease
+# pull
+	pr = pull --rebase
 # you have to manually write push --force if you really want to do it
 # commit
 	cam = commit -am ; commit all with message
