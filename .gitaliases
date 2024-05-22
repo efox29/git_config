@@ -1,4 +1,5 @@
 [alias]
+	whatis = "!f() { git config --get alias.$1; }; f"
 	au = add -u  ; add updated (or changed)
 # cleaning / house keeping
 	clense = "!f() { ~/git_config/tidy.sh ; }; f"
