@@ -38,3 +38,7 @@
 	old = red bold
 	new = green bold
 	whitespace = red reverse
+[safe]
+# used for docker
+	directory = /app
+	
